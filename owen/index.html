@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Owen's Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+<body class="w3-light-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
+  <a href="videos.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">VIDEOS</a>
+  <a href="family.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">FAMILY</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">FRIENDS</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">OWEN FAST</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+
+  <!-- Photo grid -->
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-quarter">
+      <img src="images/owenfacingmountains.jpg" style="width:100%" onclick="onClick(this)" alt="Owen facing a mountain">
+      <img src="images/grandparentsowenbeach.jpg" style="width:100%" onclick="onClick(this)" alt="Owen at beach with grandparents">
+      <img src="images/sarahowentrain1.jpg" style="width:100%" onclick="onClick(this)" alt="Sarah and Owen on the train">
+   </div>
+
+   <div class="w3-quarter">
+     <a href="videos.html">
+      <img src="images/owendrivinglegocar.jpg" style="width:100%" onclick="onClick(this)" alt="Owen driving yellow car at LegoLand"> </a>
+      <img src="images/briansarahowenbanff.jpg" style="width:100%" onclick="onClick(this)" alt="Fast family overlooking Banff">
+      <img src="images/brianowenairplane.jpg" style="width:100%" onclick="onClick(this)" alt="Brian and Owen on an airplane">
+    </div>
+
+    <div class="w3-quarter">
+      <img src="images/owenpressbox.jpg" style="width:100%" onclick="onClick(this)" alt="Owen in pressbox at Petco park">
+      <img src="images/michiganstadium.jpg" style="width:100%" onclick="onClick(this)" alt="Family at Michigan stadium">
+      <img src="images/owenbigrock1.jpg" style="width:100%" onclick="onClick(this)" alt="Owen looking to the side of mountain">
+    </div>
+
+    <div class="w3-quarter">
+      <img src="images/scottshansnowman1.jpg" style="width:100%" onclick="onClick(this)" alt="Scott and Shannon in front of snowman">
+      <img src="images/Jasper.jpg" style="width:100%" onclick="onClick(this)" alt="Jasper the dog">
+      <img src="images/owenwavinglegotrain1.jpg" style="width:100%" onclick="onClick(this)" alt="Owen waving on the Lego train">
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>This website was made for Owen Fast on his third birthday. Hopefully, it will continue to grow as Owen does. Happy birthday Owen!</p>
+      </div>
+
+      <div class="w3-third">
+        <h3>Favorite Sports Teams</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="images/michiganlogo.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Michigan Wolverines</span><br>
+            <span>It's great to be a Michigan Wolverine! Hail to the Victors!</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="images/dodgerslogo.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Los Angeles Dodgers</span><br>
+            <span>Go blue! Let's go Dodgers! Mommy's baseball team!</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>OH THE PLACES YOU HAVE BEEN!</h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Calgary</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Banff</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Visalia</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">San Diego</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cayucos</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fresno</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ann Arbor</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Home</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bakersfield</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicago</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">San Francisco</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Yosemite</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Somewhere</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sequoia</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">Owen's Backup Godparents</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
